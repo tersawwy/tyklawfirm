@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./formpage.module.css";
 import bgg from "./L.jpg";
 import axios from "axios";
-import config from "./config';
+import config from "../config';
 
 function validateInput(value, validator) {
   return validator.test(value);
