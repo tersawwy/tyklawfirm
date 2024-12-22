@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./formpage.module.css";
 import bgg from "./L.jpg";
 import axios from "axios";
+import config from "./config';
 
 function validateInput(value, validator) {
   return validator.test(value);
@@ -50,13 +51,14 @@ function Form() {
 
     if (Object.keys(errorMessages).length === 0) {
       try {
-        const response = await axios.post("http://localhost:7077/api/cases", {
-          lawyer: lawyer,
-          name: name,
-          number: phone,
-          email: email,
-          message: message,
-        });
+      
+const response = await axios.post(`${config.API_URL}/cases`, {
+  lawyer: lawyer,
+  name: name,
+  number: phone,
+  email: email,
+  message: message,
+});
 
         if (response.data.ticketno) {
           alert(
