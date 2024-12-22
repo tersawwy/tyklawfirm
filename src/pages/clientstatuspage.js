@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import styles from "./client-status.module.css"; // Import the CSS module
+import config from '../config';
 
 const ClientStatusPage = () => {
   const [email, setEmail] = useState("");
@@ -19,9 +20,9 @@ const ClientStatusPage = () => {
     setLoading(true);
 
     try {
-      const res = await axios.get("http://localhost:7077/api/cases/status", {
-        params: { email },
-      });
+      const res = await axios.get(`${config.API_URL}/cases/status`, {
+  params: { email },
+});
 
       if (res.data && res.data.length > 0) {
         // Assuming we want the most recent case (or adjust logic if needed)
