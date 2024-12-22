@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const { HfInference } = require("@huggingface/inference");
 
-const hf = new HfInference("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");
+const hf = new HfInference(process.env.HF_TOKEN);
 
 router.post("/chat", async (req, res) => {
   try {
