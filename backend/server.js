@@ -14,11 +14,11 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 const db = mysql.createPool({
-  host: "law.cnusk20e85n3.us-east-1.rds.amazonaws.com", // Use your RDS endpoint
-  user: "admin", // Your RDS username
-  password: "Project4321", // Your RDS password
-  database: "law", // Your RDS database name
-  port: 3306, // The default MySQL port
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT
 });
 
 db.getConnection((err) => {
