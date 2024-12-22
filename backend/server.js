@@ -7,7 +7,7 @@ const casesRoutes = require("./routes/casesRoutes");
 const chatRoutes = require("./routes/chatRoutes");
 
 const app = express();
-const port = 7077;
+const port = process.env.PORT || 7077;
 app.use(cors());
 app.use(express.json());
 
