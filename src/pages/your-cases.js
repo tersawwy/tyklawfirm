@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
 import { UserContext } from "../context/UserContext";
 import styles from "./yoour-cases.module.css";
+import confih from "../config";
 
 const Cases = () => {
   const { userEmail } = useContext(UserContext);
@@ -19,12 +20,12 @@ const Cases = () => {
 
       try {
         console.log("Fetching cases for:", userEmail);
-        const res = await axios.get("http://localhost:7077/api/cases", {
-          params: { email: userEmail },
-          headers: {
-            "Content-Type": "application/json",
-          },
-        });
+        const res = await axios.get(`${config.API_URL}/cases`, {
+  params: { email: userEmail },
+  headers: {
+    "Content-Type": "application/json",
+  },
+});
 
         console.log("Cases fetched successfully:", res.data);
         setCases(res.data);
@@ -54,11 +55,11 @@ const Cases = () => {
         const statusValue = updatedStatus === "no update" ? 0 : 1;
 
         // Make the API call to update the status and message
-        await axios.post("http://localhost:7077/api/cases/update-status", {
-          ticketno: caseItem.ticketno,
-          status: statusValue,
-          updatemessage: statusMessage,
-        });
+        await axios.post(`${config.API_URL}/cases/update-status`, {
+  ticketno: caseItem.ticketno,
+  status: statusValue,
+  updatemessage: statusMessage,
+});
 
         alert("Status updated successfully!");
 
