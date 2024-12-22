@@ -5,6 +5,7 @@ const authRoutes = require("./routes/authRoutes");
 const nodemailer = require("nodemailer");
 const casesRoutes = require("./routes/casesRoutes");
 const chatRoutes = require("./routes/chatRoutes");
+const path = require('path');
 
 const app = express();
 const port = process.env.PORT || 7077;
@@ -43,8 +44,14 @@ app.get("/api/users", (req, res) => {
 });
 app.use("/api", chatRoutes);
 
+app.use(express.static('public'));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+
 
 module.exports = { app, db };
