@@ -5,18 +5,20 @@ const router = express.Router();
 const { google } = require("googleapis");
 const OAuth2 = google.auth.OAuth2;
 // MySQL connection
-const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "root",
-  database: "law",
+const db = mysql.createPool({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME,
+  port: process.env.DB_PORT
 });
 
 const oauth2Client = new OAuth2(
-  "704429428612-hqofkt12ljlsgpoe6ejm6i1qbp1qt5bc.apps.googleusercontent.com", // ClientID
-  "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", // Client Secret
-  "https://developers.google.com/oauthplayground" // Redirect URL
+  process.env.GOOGLE_CLIENT_ID,
+  process.env.GOOGLE_CLIENT_SECRET,
+  "https://developers.google.com/oauthplayground"
 );
+
 oauth2Client.setCredentials({
   refresh_token:
     "1//04IaFBcRVlXTXCgYIARAAGAQSNwF-L9IreHV6z-JT0KblJ3Jt1kRwbMSnIX_XteL_m9jpqOQlTH28knzmqIg7I5AhLGVZTdwzIto",
