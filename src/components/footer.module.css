@@ -1,0 +1,38 @@
+.footer {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.copy {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 300;
+  opacity: 60%;
+}
+
+.followz {
+  font-size: 1.4rem;
+  color: white;
+  margin-bottom: 15px;
+  font-weight: 300;
+  opacity: 80%;
+}
+.iconz {
+  color: white;
+  margin-left: 1000px;
+  margin-bottom: 15px;
+}
+
+.icons {
+  color: #ffffff;
+}

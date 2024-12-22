@@ -1,0 +1,126 @@
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 16px;
+  background-color: #f4f4f8;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #171219; /* Dark text color for headers */
+}
+
+.emailText {
+  color: #586a6a; /* Subtle text color for secondary information */
+}
+
+/* Error Message Styling */
+.error {
+  background-color: #ffe5e5;
+  color: #d9534f;
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+/* Loading Styling */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  color: #586a6a;
+}
+
+/* Case Cards */
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.cardHeader {
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+}
+
+.cardTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #171219;
+}
+
+.cardDetails {
+  color: #586a6a;
+}
+
+.cardDetails p {
+  margin-bottom: 8px;
+}
+
+.cardMessage {
+  background-color: #f4f4f8;
+  padding: 16px;
+  border-radius: 8px;
+  color: #171219;
+  margin-top: 16px;
+}
+
+/* Form Styling */
+.form {
+  margin-top: 16px;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #171219;
+  margin-bottom: 8px;
+}
+
+.select,
+.textarea,
+.button {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 1rem;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+}
+
+.select:focus,
+.textarea:focus,
+.button:focus {
+  outline: none;
+  border-color: #586a6a;
+  box-shadow: 0 0 0 2px rgba(88, 106, 106, 0.3);
+}
+
+.textarea {
+  resize: none;
+}
+
+.button {
+  background-color: #171219;
+  color: #f4f4f8;
+  font-weight: bold;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #586a6a; /* Subtle hover effect */
+}

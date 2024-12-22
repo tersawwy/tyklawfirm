@@ -1,0 +1,153 @@
+.aboutus {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  color: #171219;
+  background-image: url("L.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  animation: fadeIn 0.8s;
+}
+
+.hero {
+  background: rgba(88, 106, 106, 0.8);
+  color: #f4f4f8;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 10px;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.heroDescription {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.missionVision {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.mission,
+.vision {
+  flex: 1;
+  background: rgba(244, 244, 248, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.missionTitle,
+.visionTitle {
+  color: #586a6a;
+  margin-bottom: 10px;
+}
+
+.missionDescription,
+.visionDescription {
+  color: #171219;
+  margin: 0;
+}
+
+.team {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.teamTitle {
+  color: #586a6a;
+  margin-bottom: 20px;
+}
+
+.teamMembers {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.teamMember {
+  background: rgba(244, 244, 248, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+.teamMemberImage {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #586a6a;
+}
+
+.teamMemberName {
+  margin: 10px 0 5px;
+  color: #586a6a;
+}
+
+.teamMemberRole {
+  margin: 0;
+  color: #171219;
+}
+
+.testimonials {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.testimonialsTitle {
+  margin-bottom: 20px;
+  color: #586a6a;
+}
+
+.testimonial {
+  background: rgba(244, 244, 248, 0.9);
+  padding: 20px;
+  margin: 10px 0;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  color: #171219;
+  animation: fade-up 0.8s;
+}
+
+.testimonialText {
+  font-style: italic;
+  margin: 0 0 10px;
+  color: #171219;
+}
+
+.testimonialAuthor {
+  font-weight: bold;
+  color: #586a6a;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

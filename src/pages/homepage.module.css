@@ -1,0 +1,217 @@
+
+.historySection {
+  position: relative;
+  height: 100vh;
+  background: rgba(23, 18, 25, 0.9);
+  color: #f4f4f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  animation: fadeInHistory 2s ease-out;
+}
+
+.historyContent {
+  padding: 20px;
+  max-width: 800px;
+}
+
+.historyTitle {
+  font-size: 3em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #586a6a;
+  animation: fadeInHistoryTitle 1.5s ease-out;
+}
+
+.historyDescription {
+  font-size: 1.4em;
+  margin-bottom: 40px;
+  line-height: 1.6;
+  font-style: italic;
+  animation: fadeInHistoryDescription 2s ease-out;
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  background: url('L.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(23, 18, 25, 0.7);
+  z-index: 1;
+  animation: fadeIn 2s ease-out;
+}
+
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #F4F4F8;
+  padding: 20px;
+  animation: slideUp 1.5s ease-out;
+}
+
+
+.title {
+  font-size: 4em;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #586A6A;
+  animation: fadeInTitle 1.5s ease-out;
+}
+
+
+.description {
+  font-size: 1.4em;
+  margin-bottom: 40px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-style: italic;
+  animation: fadeInDescription 2s ease-out;
+}
+
+
+.button {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  color: #F4F4F8;
+  background-color: #171219;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  animation: fadeInButton 2s ease-out;
+}
+
+.button:hover {
+  background-color: #586A6A;
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDescription {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* 
+@keyframes fadeInButton {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+} */
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5em;
+  }
+
+  .description {
+    font-size: 1.2em;
+  }
+
+  .button {
+    font-size: 1em;
+    padding: 12px 24px;
+  }
+}
+
+
+
+@keyframes fadeInHistory {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInHistoryTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInHistoryDescription {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .historyTitle {
+    font-size: 2.5em;
+  }
+
+  .historyDescription {
+    font-size: 1.2em;
+  }
+}

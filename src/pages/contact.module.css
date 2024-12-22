@@ -1,0 +1,130 @@
+.contactUsContainer {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #171219;
+  background-image: url("L.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+.heroSection {
+  background: rgba(88, 106, 106, 0.8);
+  color: #f4f4f8;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 8px;
+}
+
+.heroHeading {
+  font-size: 3rem;
+}
+
+.heroDescription {
+  font-size: 1.5rem;
+}
+
+.contactInfoSection {
+  margin: 40px 0;
+  text-align: center;
+  padding: 20px;
+  background: rgba(244, 244, 248, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contactInfoText {
+  margin: 10px 0;
+  color: #171219;
+  font-size: 1.5rem;
+}
+
+.teamSection {
+  margin: 40px 0;
+  text-align: center;
+  width: 100vw;
+  padding: 20px;
+  background: rgba(88, 106, 106, 0.8);
+  color: #f4f4f8;
+  box-sizing: border-box;
+}
+
+.teamHeading {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.teamMembers {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.teamMember {
+  background: rgba(244, 244, 248, 0.9);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.teamMemberName {
+  margin-bottom: 5px;
+  color: #586a6a;
+  font-size: 1.8rem;
+}
+
+.teamMemberDetails {
+  margin: 5px 0;
+  color: #171219;
+  font-size: 1.2rem;
+}
+
+.contactFormSection {
+  margin: 40px 0;
+  padding: 20px;
+  background: rgba(244, 244, 248, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contactFormLabel {
+  display: block;
+  margin-bottom: 10px;
+  color: #171219;
+  font-size: 1.3rem;
+}
+
+.contactFormInput,
+.contactFormTextarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #586a6a;
+  border-radius: 4px;
+  color: #171219;
+  background-color: rgba(244, 244, 248, 0.9);
+  font-size: 1.2rem;
+}
+
+.contactFormButton {
+  background: #586a6a;
+  color: #f4f4f8;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.contactFormButton:hover {
+  background: #171219;
+  color: #f4f4f8;
+}

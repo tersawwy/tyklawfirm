@@ -1,0 +1,83 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #f4f4f8;
+  min-height: 100vh;
+}
+
+.title {
+  color: #171219;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.input {
+  padding: 0.75rem;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1rem;
+  border: 1px solid #586a6a;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #171219;
+}
+
+.button {
+  padding: 0.75rem 1.5rem;
+  background-color: #171219;
+  color: #f4f4f8;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #586a6a;
+}
+
+.loading {
+  color: #586a6a;
+  font-size: 1.25rem;
+}
+
+.error {
+  color: #d9534f;
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+
+.statusCard {
+  background-color: #171219;
+  color: #f4f4f8;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 600px;
+  margin-top: 2rem;
+}
+
+.statusText {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f4f4f8;
+  margin-bottom: 1rem;
+}
+
+.statusMessage {
+  font-size: 1.25rem;
+  color: #f4f4f8;
+  margin-top: 0.5rem;
+}

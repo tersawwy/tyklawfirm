@@ -1,0 +1,120 @@
+
+.paymentPage {
+  padding: 20px;
+  z-index: 1;
+  position: relative;
+}
+
+.hero {
+  background: rgba(88, 106, 106, 0.8);
+  color: #F4F4F8;
+  text-align: center;
+  padding: 50px 20px;
+  border-radius: 10px;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.heroDescription {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.plans {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px 0;
+}
+
+.plan {
+  background: rgba(244, 244, 248, 0.8);
+  padding: 20px;
+  width: 250px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.planHover {
+  transform: translateY(-10px);
+}
+
+.planSelected {
+  border: 2px solid #586A6A;
+  background: #e0f1f1;
+}
+
+.planTitle {
+  color: #171219;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 2rem;
+  color: #586A6A;
+  margin-bottom: 15px;
+}
+
+.description {
+  color: #171219;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #586A6A;
+  color: #F4F4F8;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.btnHover {
+  background-color: #171219;
+}
+
+.confirmation {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #586A6A;
+}
+
+.responsive {
+  @media (max-width: 768px) {
+    .plans {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+.payNowWrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.payNowBtn {
+  background-color: #171219;
+  color: #F4F4F8;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.payNowBtn:hover {
+  background-color: #586A6A;
+}
+
