@@ -3,6 +3,7 @@ import axios from "axios";
 import styles from "./login.module.css"; // Your CSS file
 import { useNavigate } from "react-router-dom";
 import { UserContext } from "../context/UserContext";
+import config from "../config";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -15,9 +16,9 @@ const Login = () => {
   const handleGenerateOtp = async () => {
     try {
       const res = await axios.post(
-        "http://localhost:7077/api/auth/generate-otp",
-        { email }
-      );
+  `${config.API_URL}/auth/generate-otp`,
+  { email }
+);
       setGeneratedOtp(res.data.otp); // Store the generated OTP
       setMessage(res.data.message);
       setOtp(generatedOtp);
@@ -31,12 +32,12 @@ const Login = () => {
     try {
       if (otp.trim() === generatedOtp.trim()) {
         const res = await axios.post(
-          "http://localhost:7077/api/auth/verify-otp",
-          {
-            email,
-            otp,
-          }
-        );
+  `${config.API_URL}/auth/verify-otp`,
+  {
+    email,
+    otp,
+  }
+);
 
         setMessage(res.data.message);
         setUserEmail(email); // Set the user email in context
