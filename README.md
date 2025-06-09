@@ -1,75 +1,126 @@
-# Getting Started with Create React App
+# ⚖️ TYK Law Firm Case Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The TYK Law Firm Case Management System is a full-stack web application designed to streamline the management of legal cases, clients, and appointments for law firms. It provides a robust platform for efficient case tracking, secure user authentication, and automated workflows.
 
-In the project directory, you can run:
+**Key Features:**
+* **Case Management:** Efficiently create, track, and manage legal cases, including client details, case status, and associated documents.
+* **Client & Appointment Management:** Organize client information and schedule appointments directly within the system.
+* **Secure Authentication:** Implements OTP (One-Time Password) based authentication using Nodemailer for email verification, and integrates OAuth V2 for enhanced security and convenience.
+* **Automated Case Assignment:** Reduces manual effort by automating the assignment of cases, improving workflow efficiency.
+* **Intuitive User Interface:** Developed with ReactJS to provide a responsive and user-friendly experience.
+* **Robust Backend:** Built with ExpressJS to handle API requests, data processing, and interactions with the database.
+* **Relational Database:** Utilizes MySQL for reliable storage and management of case-related data.
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Experience the live application here: [https://tykfirm.netlify.app](https://tykfirm.netlify.app)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+* **Frontend:**
+    * ReactJS
+    * HTML5
+    * CSS3
+    * JavaScript
+* **Backend:**
+    * Node.js
+    * ExpressJS
+    * Nodemailer (for OTP)
+    * OAuth V2
+* **Database:**
+    * MySQL
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Setup Instructions
 
-### `npm run build`
+### Prerequisites
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Node.js and npm (or yarn) installed
+* MySQL server installed and running
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/tersawwy/tyklawfirm.git](https://github.com/tersawwy/tyklawfirm.git)
+    cd tyklawfirm
+    ```
 
-### `npm run eject`
+2.  **Backend Setup:**
+    Navigate to the `backend` directory, install dependencies, and set up your environment variables.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+    ```bash
+    cd backend
+    npm install # or yarn install
+    ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    Create a `.env` file in the `backend` directory with your database and email credentials.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    Example `.env`:
+    ```
+    DB_HOST=localhost
+    DB_USER=your_mysql_user
+    DB_PASSWORD=your_mysql_password
+    DB_DATABASE=tyklawfirm_db
+    
+    # For Nodemailer (e.g., using Gmail)
+    EMAIL_USER=your_email@gmail.com
+    EMAIL_PASS=your_email_app_password
+    ```
+    *Replace placeholders with your actual credentials.*
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+3.  **Database Setup:**
+    Connect to your MySQL server and create the database and tables. You might have SQL scripts in the `backend` folder (e.g., `schema.sql` or `init.sql`) that define the database structure.
 
-## Learn More
+    ```sql
+    CREATE DATABASE tyklawfirm_db;
+    USE tyklawfirm_db;
+    -- Run your table creation queries here or import a .sql file
+    ```
+    *If no `schema.sql` is provided in the repository, you will need to manually define your tables based on the backend's data models.*
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+4.  **Frontend Setup:**
+    Navigate to the `frontend` directory and install dependencies.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    ```bash
+    cd ../frontend
+    npm install # or yarn install
+    ```
 
-### Code Splitting
+    You might need to create a `.env` file in the `frontend` directory if your React app needs to know the backend API URL.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    Example `.env` (in `frontend` directory):
+    ```
+    REACT_APP_API_URL=http://localhost:5000/api # Or wherever your backend runs
+    ```
 
-### Analyzing the Bundle Size
+### Running the Application
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1.  **Start the Backend Server:**
+    From the `backend` directory:
+    ```bash
+    npm start # or node server.js
+    ```
+    The backend server will typically run on `http://localhost:5000` (or the port defined in your backend code).
 
-### Making a Progressive Web App
+2.  **Start the Frontend Development Server:**
+    From the `frontend` directory:
+    ```bash
+    npm start
+    ```
+    This will usually open the application in your web browser at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
+Contributions are highly appreciated! If you have suggestions for improvements, bug fixes, or new features, please:
+1.  Fork the repository.
+2.  Create a new branch (`git checkout -b feature/YourFeature`).
+3.  Make your changes.
+4.  Commit your changes (`git commit -m 'Add some feature'`).
+5.  Push to the branch (`git push origin feature/YourFeature`).
+6.  Open a Pull Request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## License
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-
-                    
-export default Product;
+This project is open-source and available under the [MIT License](LICENSE).
